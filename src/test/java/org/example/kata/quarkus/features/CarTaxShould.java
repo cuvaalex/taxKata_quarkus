@@ -26,7 +26,7 @@ public class CarTaxShould {
         given()
                 .body(new Car(
                         LocalDateTime.of(2001, 1, 1, 0, 0),
-                        1550)
+                        1550, 0)
                         , ObjectMapperType.JACKSON_2)
                 .header("Content-Type", MediaType.APPLICATION_JSON)
                 .when()
@@ -44,7 +44,7 @@ public class CarTaxShould {
         given()
                 .body(new Car(
                                 LocalDateTime.of(2001, 1, 1, 0, 0),
-                                1551)
+                                1551, 0)
                         , ObjectMapperType.JACKSON_2)
                 .header("Content-Type", MediaType.APPLICATION_JSON)
                 .when()
@@ -54,5 +54,24 @@ public class CarTaxShould {
                 .contentType(ContentType.JSON)
                 .body("tax", equalTo(expected));
     }
+
+    @DisplayName("Return 65 GBP When car register after or equal 1st march 2001 and co2 up to 100")
+    @Test
+    public void return_65GBP_when_register_after_equal_20010301_and_co2_up_to_100(){
+        int expected = 65;
+        given()
+                .body(new Car(
+                                LocalDateTime.of(2001, 1, 1, 0, 0),
+                                0, 100)
+                        , ObjectMapperType.JACKSON_2)
+                .header("Content-Type", MediaType.APPLICATION_JSON)
+                .when()
+                .get("/taxVehicule/car")
+                .then()
+                .statusCode(200)
+                .contentType(ContentType.JSON)
+                .body("tax", equalTo(expected));
+    }
+
 
 }
