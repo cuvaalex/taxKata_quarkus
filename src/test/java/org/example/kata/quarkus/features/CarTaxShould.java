@@ -61,7 +61,8 @@ public class CarTaxShould {
     @ParameterizedTest
     @CsvSource({
         "0,65", "100, 65", "55,65",
-            "101, 75", "120, 75"
+            "101, 75", "120, 75",
+            "121, 105"
     })
     public void return_65GBP_when_register_after_equal_20010301_and_co2_up_to_100(int co2, int expected){
         given()

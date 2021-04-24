@@ -22,8 +22,10 @@ public class TaxCarUseCase implements ITaxUseCase{
         }else {
             if(car.co2() <= 100)
                 return new Tax(65);
-            else
+            else if(car.co2() <= 120)
                 return new Tax(75);
+            else
+                return new Tax(105);
         }
     }
 }
