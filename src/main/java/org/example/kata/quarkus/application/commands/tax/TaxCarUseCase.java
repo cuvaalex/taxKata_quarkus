@@ -39,8 +39,8 @@ public class TaxCarUseCase implements ITaxUseCase{
                     return createTax(carTaxes.get(key));
                 }
             }
+            return createTax(160);
         }
-        return null;
     }
 
     private Tax createTax(int taxValue) {

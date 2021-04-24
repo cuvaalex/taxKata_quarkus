@@ -64,7 +64,8 @@ public class CarTaxShould {
             "101, 75", "120, 75",
             "121, 105", "150, 105",
             "151, 125", "165, 125",
-            "166, 145", "185, 145"
+            "166, 145", "185, 145",
+            "186, 160"
     })
     public void return_65GBP_when_register_after_equal_20010301_and_co2_up_to_100(int co2, int expected){
         given()
