@@ -4,16 +4,12 @@ import io.quarkus.test.junit.QuarkusTest;
 import io.restassured.http.ContentType;
 import io.restassured.mapper.ObjectMapperType;
 import org.example.kata.quarkus.domain.vehicules.Car;
-import org.example.kata.quarkus.domain.vehicules.Van;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 
 import javax.ws.rs.core.MediaType;
-
-import java.sql.Timestamp;
-import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 import static io.restassured.RestAssured.given;

@@ -3,7 +3,6 @@ package org.example.kata.quarkus.features;
 import io.quarkus.test.junit.QuarkusTest;
 import io.restassured.http.ContentType;
 import io.restassured.mapper.ObjectMapperType;
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
@@ -20,7 +19,8 @@ public class MotorcycleTaxShould {
     @CsvSource({
             "0,15", "150,15",
             "151,30", "400,30",
-            "401,45", "600, 45"
+            "401,45", "600, 45",
+            "601,60"
     })
     public void return_expected_GBP_when_motorcycle_co2 (int co2, int expected) {
                 given()
