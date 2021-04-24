@@ -4,6 +4,7 @@ import org.example.kata.quarkus.application.commands.tax.TaxOrchestrator;
 import org.example.kata.quarkus.application.commands.tax.TaxVanUseCase;
 import org.example.kata.quarkus.domain.Taxs.Tax;
 import org.example.kata.quarkus.domain.vehicules.Car;
+import org.example.kata.quarkus.domain.vehicules.Motorcycle;
 import org.example.kata.quarkus.domain.vehicules.Van;
 
 import javax.inject.Inject;
@@ -29,6 +30,12 @@ public class TaxControler {
     @Path("car")
     public Tax car(Car car) {
         return service.computeTax(car);
+    }
+
+    @GET
+    @Path("motorcycle")
+    public Tax motorcycle(Motorcycle motorcycle){
+        return service.computeTax(motorcycle);
     }
 
 }
