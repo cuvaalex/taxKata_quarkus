@@ -37,7 +37,7 @@ public class CarTaxShould {
 
     @DisplayName("Return 190 GBP When car register before 1st march 2001 and cc greater than 1550")
     @Test
-    public void return_165GBP_when_register_before_20010301_and_cc_greater_1550cc(){
+    public void return_190GBP_when_register_before_20010301_and_cc_greater_1550cc(){
         int expected = 190;
         given()
                 .body(new Car(
@@ -66,7 +66,7 @@ public class CarTaxShould {
     public void return_65GBP_when_register_after_equal_20010301_and_co2_up_to_100(int co2, int expected){
         given()
                 .body(new Car(
-                                LocalDateTime.of(2001, 1, 1, 0, 0),
+                                LocalDateTime.of(2001, 1, 2, 0, 0),
                                 0, co2)
                         , ObjectMapperType.JACKSON_2)
                 .header("Content-Type", MediaType.APPLICATION_JSON)

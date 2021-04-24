@@ -26,9 +26,9 @@ public class TaxCarUseCase implements ITaxUseCase{
     @Override
     public Tax computeTax(IVehicle vehicle) {
         var car = (Car) vehicle;
-        if(car.registrationDate().isBefore(LocalDateTime.of(2001,1,1,0,0))){
+        if(car.registrationDate().isBefore(LocalDateTime.of(2001,1,2,0,0))){
             if(car.engineSize() > 1550)
-                return createTax(198);
+                return createTax(190);
             else
                 return createTax(165);
         }else {
