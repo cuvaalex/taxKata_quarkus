@@ -1,7 +1,6 @@
 package org.example.kata.quarkus.application.commands.tax;
 
 import org.example.kata.quarkus.domain.Taxs.Tax;
-import org.example.kata.quarkus.domain.Taxs.TaxBuilder;
 import org.example.kata.quarkus.domain.vehicules.Car;
 import org.example.kata.quarkus.domain.vehicules.IVehicle;
 
