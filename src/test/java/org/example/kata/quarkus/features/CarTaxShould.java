@@ -60,7 +60,7 @@ public class CarTaxShould {
     @DisplayName("Return expected GBP When car register after or equal 1st march 2001 and co2")
     @ParameterizedTest
     @CsvSource({
-        "0,65", "100, 65", "55,65"
+        "0,65", "100, 65", "55,65", "101, 75"
     })
     public void return_65GBP_when_register_after_equal_20010301_and_co2_up_to_100(int co2, int expected){
         given()
