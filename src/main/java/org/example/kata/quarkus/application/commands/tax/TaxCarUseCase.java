@@ -32,15 +32,22 @@ public class TaxCarUseCase implements ITaxUseCase{
             else
                 return createTax(165);
         }else {
-            if(car.co2() <= 100) {
-                return createTax(65);
-            } else if(car.co2() <= 120)
-                return createTax(75);
-            else if (car.co2() <= 150)
-                return createTax(105);
-            else
-                return createTax(125);
+            int carCo2 = car.co2();
+            for (Integer key : carTaxes.keySet()){
+                if(carCo2 <= key){
+                    return createTax(carTaxes.get(key));
+                }
+            }
+//            if(car.co2() <= 100) {
+//                return createTax(65);
+//            } else if(car.co2() <= 120)
+//                return createTax(75);
+//            else if (car.co2() <= 150)
+//                return createTax(105);
+//            else
+//                return createTax(125);
         }
+        return null;
     }
 
     private Tax createTax(int taxValue) {
