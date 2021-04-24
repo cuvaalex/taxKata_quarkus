@@ -21,15 +21,14 @@ public class MotorcycleTaxShould {
             "0,15"
     })
     public void return_expected_GBP_when_motorcycle_co2 (int co2, int expected) {
-        Assertions.assertTrue(true);
-        //        given()
-//                .body(aMotorCycle().co2(co2).build(), ObjectMapperType.JACKSON_2)
-//                .contentType(ContentType.JSON)
-//                .when()
-//                .get("/taxVehicule/motorcycle")
-//                .then()
-//                .statusCode(200)
-//                .contentType(ContentType.JSON)
-//                .body("tax", equalTo(expected));
+                given()
+                .body(aMotorCycle().co2(co2).build(), ObjectMapperType.JACKSON_2)
+                .contentType(ContentType.JSON)
+                .when()
+                .get("/taxVehicule/motorcycle")
+                .then()
+                .statusCode(200)
+                .contentType(ContentType.JSON)
+                .body("tax", equalTo(expected));
     }
 }

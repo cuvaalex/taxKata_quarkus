@@ -25,7 +25,7 @@ public class TaxOrchestrator {
     }
 
     public Tax computeTax(Motorcycle motorcycle){
-        return Objects.requireNonNull(getUseCase(TaxCarUseCase.class)).computeTax(motorcycle);
+        return Objects.requireNonNull(getUseCase(TaxMotorcycleUseCase.class)).computeTax(motorcycle);
     }
 
     private ITaxUseCase getUseCase(Class inst){
