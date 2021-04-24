@@ -21,6 +21,7 @@ public class TaxCarUseCase implements ITaxUseCase{
         carTaxes.put(120, 75);
         carTaxes.put(150, 105);
         carTaxes.put(165, 125);
+        carTaxes.put(166,145);
     }
 
     @Override
