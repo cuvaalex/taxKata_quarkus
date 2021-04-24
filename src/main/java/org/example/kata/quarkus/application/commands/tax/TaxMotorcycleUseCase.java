@@ -15,7 +15,9 @@ public class TaxMotorcycleUseCase implements ITaxUseCase {
         Motorcycle motorcycle = (Motorcycle) vehicle;
         if (motorcycle.co2() <= 150)
             return aTax().taxValue(15).buildTax();
-        else
+        else if (motorcycle.co2() <= 400)
             return aTax().taxValue(30).buildTax();
+        else
+            return aTax().taxValue(45).buildTax();
     }
 }
