@@ -38,14 +38,6 @@ public class TaxCarUseCase implements ITaxUseCase{
                     return createTax(carTaxes.get(key));
                 }
             }
-//            if(car.co2() <= 100) {
-//                return createTax(65);
-//            } else if(car.co2() <= 120)
-//                return createTax(75);
-//            else if (car.co2() <= 150)
-//                return createTax(105);
-//            else
-//                return createTax(125);
         }
         return null;
     }
