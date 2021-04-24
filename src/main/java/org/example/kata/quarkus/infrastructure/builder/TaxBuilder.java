@@ -1,4 +1,6 @@
-package org.example.kata.quarkus.domain.Taxs;
+package org.example.kata.quarkus.infrastructure.builder;
+
+import org.example.kata.quarkus.domain.Taxs.Tax;
 
 public class TaxBuilder {
     private int taxValue;

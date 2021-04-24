@@ -9,7 +9,7 @@ import java.time.LocalDateTime;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
-import static org.example.kata.quarkus.domain.Taxs.TaxBuilder.aTax;
+import static org.example.kata.quarkus.infrastructure.builder.TaxBuilder.aTax;
 
 @ApplicationScoped
 public class TaxCarUseCase implements ITaxUseCase{

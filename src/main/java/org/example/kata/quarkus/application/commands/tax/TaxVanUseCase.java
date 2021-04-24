@@ -1,13 +1,12 @@
 package org.example.kata.quarkus.application.commands.tax;
 
 import org.example.kata.quarkus.domain.Taxs.Tax;
-import org.example.kata.quarkus.domain.Taxs.TaxBuilder;
 import org.example.kata.quarkus.domain.vehicules.IVehicle;
 import org.example.kata.quarkus.domain.vehicules.Van;
 
 import javax.enterprise.context.ApplicationScoped;
 
-import static org.example.kata.quarkus.domain.Taxs.TaxBuilder.aTax;
+import static org.example.kata.quarkus.infrastructure.builder.TaxBuilder.aTax;
 
 @ApplicationScoped
 public class TaxVanUseCase implements ITaxUseCase {
