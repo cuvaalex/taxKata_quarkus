@@ -18,7 +18,7 @@ public class MotorcycleTaxShould {
     @DisplayName("Return expected GBP When Motorcycle co2 has a value")
     @ParameterizedTest
     @CsvSource({
-            "0,15"
+            "0,15", "150,15"
     })
     public void return_expected_GBP_when_motorcycle_co2 (int co2, int expected) {
                 given()
