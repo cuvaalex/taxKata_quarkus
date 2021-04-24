@@ -19,7 +19,7 @@ public class MotorcycleTaxShould {
     @ParameterizedTest
     @CsvSource({
             "0,15", "150,15",
-            "151,30"
+            "151,30", "400,30"
     })
     public void return_expected_GBP_when_motorcycle_co2 (int co2, int expected) {
                 given()
